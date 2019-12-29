@@ -1,0 +1,271 @@
+---
+title: hexo搭建个人博客（next主题优化）
+date: 2018-12-01:02:13
+tags: hexo
+categories: 工具
+---
+
+# 1.文章创建、更新和删除
+- 创建文章
+首先需要进入你的博客的根目录下
+```
+hexo new "博客标题"
+```
+之后会在/source/_posts/目录下生成“博客标题.md”文件，然后就可以在该文件中采用markdown的方式写作。.md文件头部会自动生成title和date，如果要对文章进行标签和类别分类的需要手动加上。如下：
+<!-- more --> 
+```
+---
+title: hexo搭建个人博客（next主题优化）
+date: 2018-12-19:02:13
+tags: hexo
+categories: 工具
+---
+```
+分类和标签的主要事项请参看[官网](https://hexo.io/zh-cn/docs/front-matter.html#%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE)
+
+- 修改文章
+修改文章简单，只需在/source/_posts/目录下找到对应的.md文件进行编辑就可以。
+- 删除文章
+删除文件简单，只需在/source/_posts/目录下找到对应的.md文件删除就可以。
+
+**注意：**每次操作需要清除静态文件缓存再重新生成静态文件即可。
+```
+hexo cl && hexo g
+```
+# 2.主题自带样式
+- tabs标签
+```
+{% tabs 选项卡, 2 %}
+<!-- tab -->
+**这是选项卡 1** 
+<!-- endtab -->
+<!-- tab -->
+**这是选项卡 2**
+<!-- endtab -->
+<!-- tab -->
+**这是选项卡 3** 
+<!-- endtab -->
+{% endtabs %}
+```
+效果如下：
+{% tabs 选项卡, 2 %}
+<!-- tab -->
+**这是选项卡 1** 
+<!-- endtab -->
+<!-- tab -->
+**这是选项卡 2**
+<!-- endtab -->
+<!-- tab -->
+**这是选项卡 3** 
+<!-- endtab -->
+{% endtabs %}
+
+首先可以在主题配置文件中有配置，需要配置下，贴上我的：
+```
+# Tabs tag.
+tabs:
+  enable: true
+  transition:
+    tabs: true
+    labels: true
+  border_radius: 0
+  ```
+  然后上面源码中, 2表示一开始在第二个选项卡，非必须，若数值为-1则隐藏选项卡内容。更多用法请查看[官方文档](https://theme-next.org/docs/tag-plugins/tabs)
+- label标签
+在主题配置文件中找到label tag，然后设置为true
+代码：
+```
+{% label default@默认 %}
+{% label primary@主要 %}
+{% label success@成功 %}
+{% label info@信息 %}
+{% label warning@警告 %}
+{% label danger@危险 %}
+```
+效果如下：
+{% label default@默认 %}
+{% label primary@主要 %}
+{% label success@成功 %}
+{% label info@信息 %}
+{% label warning@警告 %} 
+{% label danger@危险 %}
+
+
+# 3.添加文章评论功能
+博客评论功能采用的韩国的Livere(来必力)
+1. 准备
+    - 去Livere官网免费注册账号，选择city版安装
+    - 进入管理页面 -> 代码管理 -> 一般网站，复制data-uid（用于粘贴到主题配置文件里）
+    - 进入管理页面 -> 设置 -> 将个人博客的域名复制到网站的URL里
+    [Livere官网](https://livere.com/)
+2. 主题配置文件
+```
+# Support for LiveRe comments system.评论管理
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+livere_uid: data-id(来自Livere的data-id)
+```
+**注意：**如果设置了其他的评论管理，请注释掉保留一个就行。
+
+# 4.添加文章字数与阅读量统计
+1. 添加文章字数与阅读时长统计
+{% tabs 步骤 %}
+<!-- tab -->
+安装插件：hexo-symbols-count-time
+```
+npm install hexo-symbols-count-time --save
+```
+<!-- endtab -->
+<!-- tab -->
+主题站点配置文件中添加：
+```
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+ ```
+<!-- endtab -->
+{% endtabs %}
+
+2. 添加阅读量统计
+    busuanzi统计功能, 打开主题配置文件，找到代码所在位置进行修改
+```
+# Show Views / Visitors of the website / page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi
+busuanzi_count:
+  enable: true
+  total_visitors: true #网站总访客数量
+  total_visitors_icon: user
+  total_views: true #网站的文章总阅读数
+  total_views_icon: eye
+  post_views: true #单篇文章的阅读数
+  post_views_icon: eye
+```
+  其他参考:https://www.jianshu.com/p/f2ec7eea543d
+
+# 5.添加右上角forke-me-on-github
+打开代码所在位置进行修改
+```
+# `Follow me on GitHub` banner in the top-right corner.
+github_banner:
+  enable: true
+  permalink: https://github.com/xinyunduan
+  title: Follow me on GitHub
+```
+
+# 6.添加代码块复制功能
+
+在对文章插入的代码块，如果有一个一键复制的功能会使操作更加友好。
+找到代码所在位置进行修改
+```
+codeblock:
+  # Code Highlight theme
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  # See: https://github.com/chriskempson/tomorrow-theme
+  highlight_theme: normal
+  # Add copy button on codeblock
+  copy_button:
+    enable: true #代码复制
+    # Show text copy result.
+    show_result: true #代码复制成功标识
+    # Available values: default | flat | mac
+    style:
+```
+
+# 7.修改文章内链接文本样式
+修改/themes/next/source/css/_common/components/post/post.styl，在末尾添加CSS样式：
+```
+// 文章内链接文本样式
+.post-body p a{
+  color: #0593d3; //原始链接颜色
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3; //底部分割线颜色
+  &:hover {
+    color: #fc6423; //鼠标经过颜色
+    border-bottom: none;
+    border-bottom: 1px solid #fc6423; //底部分割线颜色
+  }
+}
+```
+
+# 8.修改文章末尾标签样式
+修改文章底部的标签的图标，打开主题配置文件，找到tag_icon设为true
+```
+# Use icon instead of the symbol # to indicate the tag at the bottom of the post
+tag_icon: true
+```
+# 9.修改网站底部样式
+添加时间起始日期，以及修改icon样式和颜色
+```
+footer:
+  # Specify the date when the site was setup. If not defined, current year will be used.
+  since: 2015
+
+  # Icon between year and copyright info.
+  icon:
+    # Icon name in Font Awesome. See: https://fontawesome.com/v4.7.0/icons/
+    # `heart` is recommended with animation in red (#ff0000).
+    name: heart
+    # If you want to animate the icon, set it to true.
+    animated: false
+    # Change the color of icon, using Hex Code.
+    color: "#ff0033" #红色
+ ```
+# 10.在文章末尾添加“文章结束”标记
+   - 在根本目下~/source/文件夹下创建新的文件夹_data
+   新建文件passage-end-tag.swig，添加如下内容：
+   ```
+   <!-- 文件结束语-->
+   <div>
+    {% if not is_index %}
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束&nbsp;&nbsp<i class="fa fa-heart"></i>&nbsp;&nbsp感谢您的阅读-------------</div>
+    {% endif %}
+   </div>
+  ```
+  - 打开主题配置文件，在末尾添加如下代码：
+  ```
+  # 文章末尾添加“本文结束”标记
+  passage_end_tag:
+  enabled: true
+  ```
+   
+# 11.使用 hexo-neat 插件压缩页面资源
+  1.像安装其它插件一样，在站点的根目录 npm 安装插件：
+  ```
+  cnpm install hexo-neat --save
+  ```
+  2.添加相关配置到站点配置文件：
+  ```
+  # 文件压缩，设置一些需要跳过的文件 
+  # hexo-neat
+   neat_enable: true
+  # 压缩 html
+   neat_html:
+   enable: true
+  # 一些百度、Google 的验证文件需要排除掉
+   exclude:
+      - '**/baidu*.html'
+      - '**/google*.html'
+  # 压缩 css
+   neat_css:
+      enable: true
+      exclude:
+        - '**/*.min.css'
+  # 压缩 js
+   neat_js:
+      enable: true
+      mangle: true
+      output:
+      compress:
+      exclude:
+        - '**/*.min.js'
+        - '**/jquery.fancybox.pack.js'
+        - '**/index.js'
+  ```
+ 3.再执行 hexo g 命令生成 public 目录文件时，会发现控制台有输出压缩日志
+
+ 后记：
+ 主题next的新版本很多功能都集成到了next里面，只需要在主题配置文件里进行相关设置就可以，对比老版本，很多都需要写js脚本来实现。
+
+ 参考：https://blog.csdn.net/weixin_42905141/article/details/102677424
