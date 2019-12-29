@@ -243,7 +243,7 @@ footer:
   ```
   # 文章末尾添加“本文结束”标记
   passage_end_tag:
-  enabled: true
+    enabled: true
   ```
    
 # 11.使用 hexo-neat 插件压缩页面资源
@@ -341,16 +341,18 @@ excerpt_description: true
 
 # 17.添加相关文章
 在文章的末尾添加相关（推荐）文章
-    - 安装插件
+  - 安装插件
     ```
     npm install hexo-related-popular-posts –save
     ```
-    - 添加脚本
+
+  - 添加脚本
     在/themes/next/layout/_macro/post.swig文件里添加代码：
     ```
     {{ popular_posts( {} , post ) }} 
     ```
-**bug：**无法设置标题且取消在首页显示相关阅读
+
+**bug：** 无法设置标题且取消在首页显示相关阅读
 
 # 18.添加数学公式的支持
 持 MathJax 和 KaTeX 两种加载数学公式的方法，使用语法都是 LaTeX 语法。不过 MathJax 的功能比较全面，KaTeX 的加载速度比较快。z这里选择了MathJax, 默认的 per_page: true 的意思是，只有当你在文章设定中添加 mathjax: ture，才会在当前页面中加载公式渲染，所以如果要显示公式一定要在文章的开头添加。
