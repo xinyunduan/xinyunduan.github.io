@@ -43,8 +43,10 @@
           <span>0%</span>
         </div>
       {%- endif %}
-
     </div>
+        {% if theme.background_music %}
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="{{ theme.background_music }}"></iframe>
+        {% endif %}
   </aside>
   <div id="sidebar-dimmer"></div>
 {% endmacro %}

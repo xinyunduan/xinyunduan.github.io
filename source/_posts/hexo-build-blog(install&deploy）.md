@@ -4,6 +4,7 @@ date: 2018-11-25 09:18:49
 categories: 工具
 tags: 
   - hexo
+  - next
 ---
 
 # 一、前言
@@ -28,6 +29,7 @@ git --version
 node -v
 ```
 如果输出git的版本信息说明安装成功。
+
 ## 3.更换npm源
 npm是node.js的包管理工具，新版的node.js已经集成了npm，同样可以输入:npm -v来测试是否安装成功
 ```
@@ -40,19 +42,21 @@ npm -v
 ```
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
+
 ## 4.安装hexo
 ```
 cnpm install -g hexo-cli
 ```
 在cmd中输入hexo -v检查是否安装成功
+
 ## 5.hexo常用命令
-命令|简写|描述|
-|--|--|--|
-hexo init [folder]| |用于新建一个网站，如果后面没有跟folder，hexo会默认在当面的文件建立资源。|
-hexo clean|hexo cl|清除缓存文件 (db.json) 和已生成的静态文件 (public)。|
-hexo generate|hexo g|生成静态文件|
-hexo server|hexo s|启动本地服务器|
-hexo deploy|hexo d|部署网站|
+|命令|简写|描述
+|:--:|:--:|:--:|
+|hexo init [folder]| |用于新建一个网站，如果后面没有跟folder，hexo会默认在当面的文件建立资源。|
+|hexo clean|hexo cl|清除缓存文件 (db.json) 和已生成的静态文件 (public)。|
+|hexo generate|hexo g|生成静态文件|
+|hexo server|hexo s|启动本地服务器|
+|hexo deploy|hexo d|部署网站|
 
 # 三、建站
 ## 1.创建资源
@@ -209,7 +213,7 @@ symbols_count_time:
 # 四、主题安装
 在建站之后，根目录下会有一个themes的文件夹用于存放各种主题，默认的是landscape主题，如果你不喜欢可安装其他的主题，hexo的[更多主题](https://hexo.io/themes/)选择。
 本文使用的是next主题，也是目前最受欢迎的一个主题，下面我们来安装一下next主题。
-## 安装next主题
+## 1.安装next主题
 [next官网](https://theme-next.org/)，原来的旧版本已经停止更新了，为了不必要的麻烦请下载安装6.0版本之后的。
 这个是next v5版本的，目前已经停止维护了。https://github.com/iissnan/hexo-theme-next
 以下是v6版本及更新版本的，
@@ -221,7 +225,7 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next
 git tag -l #查看版本
 git checkout tag
 ```
-## 启用next主题
+## 2.启用next主题
 打开站点配置配置文件_config.yml文件，找到theme字段，将值改成next。注：冒号后面空一个，该值的名称与theme目录下的主题文件夹名称一致。
 ```
 # Extensions
@@ -229,7 +233,7 @@ git checkout tag
 ## Themes: https://hexo.io/themes/
 theme: next
 ```
-## 启动服务
+## 3.启动服务
 每次切换主题之后需要清除hexo的缓存
 ```
 # 清楚缓存

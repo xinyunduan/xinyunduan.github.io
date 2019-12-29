@@ -99,7 +99,7 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:xinyunduan/xinyunduan.github.io.git
-  branch: maste
+  branch: master
 
 
 #######################################

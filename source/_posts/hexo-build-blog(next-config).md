@@ -4,6 +4,7 @@ date: 2018-11-25 17:28:06
 categories: 工具
 tags:
   - hexo
+  - next
 ---
 
 过上一步的努力，我们终于搭建好了一个属于自己的博客框架，并且还安装了next主题，但是博客的结构还比较捡漏，接下来我们需要把她美化一下，本文主要是针对next主题的美化。进入到hexo生成的博客目录，如D:blog/， **所有的hexo命令都是在该路径下执行**
@@ -68,7 +69,7 @@ hexo clean && hexo g && hexo s
 其他同理。
 再预览试试应该没问题了，这里的空格貌似被非法转义了。如果没有遇到上述问题请忽略！
 ## 2.添加类别模块
-如果在菜单配置中选择了categories，那么为了使文章能够正确映射到对应的类别，需要新建一个分类页面。
+如果在菜单配置中选择了categories，那么为了使文章能够正确映射到对应的类别，需要新建一个分类页面。每次添加一个新的页面即hexo new page "page name"，都会在./source/页面下生成一个对应文件夹，文件下面有个一个markwdowm文件index.md，需要指定type。
 ```
 hexo new page categories
 ```
@@ -182,7 +183,7 @@ local_search:
 
 ```
 
-# 七、添加社交模块
+# 八、添加社交模块
 想要哪个就去掉注释符号，也可以自定义。social_icons是对应的社交图标，[更多图标](https://fontawesome.com/icons?from=io)
 ```
 # Social Links

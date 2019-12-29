@@ -1,7 +1,8 @@
 ---
 title: git基本操作
 date: 2019-12-26 22:47:18
-tags: git
+tags: 
+   - git
 categories: 
    - [git, 工具]
 ---
@@ -82,3 +83,18 @@ git branch -D branch-name(to be deleted)
 ## 13.克隆远端项目指定分支
 git clone -b <远程指定分支> <远程仓库地址> <本地文件夹名>
 如果不指定本地文件夹，则默认克隆到当前目录下。
+## 14.查看与本地仓库关联的远端仓库
+git remote --v
+## 15.换行符问题,统一linux风格
+```
+提交/检出 不转换
+git config --global core.autocrlf false
+ 
+拒绝提交包含混合换行符的文件
+git config --global core.safecrlf true
+ 
+设置区分大小写
+git config --global core.ignorecase false
+```
+## 16.新手使用git协同开发需注意
+每次更新代码之前，先pull远端的仓库代码，之后再在本地更新代码。

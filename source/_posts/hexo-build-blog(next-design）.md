@@ -1,7 +1,9 @@
 ---
 title: hexo搭建个人博客（next主题优化）
 date: 2018-12-01:02:13
-tags: hexo
+tags: 
+  - hexo
+  - next
 categories: 工具
 ---
 
@@ -17,7 +19,9 @@ hexo new "博客标题"
 ---
 title: hexo搭建个人博客（next主题优化）
 date: 2018-12-19:02:13
-tags: hexo
+tags: 
+  - hexo
+  - next
 categories: 工具
 ---
 ```
@@ -106,8 +110,19 @@ livere_uid: data-id(来自Livere的data-id)
 ```
 **注意：**如果设置了其他的评论管理，请注释掉保留一个就行。
 
-# 4.添加文章字数与阅读量统计
-1. 添加文章字数与阅读时长统计
+# 4.文章元数据
+1. 每一篇文章标题下的写作时间、更新时间等信息。在主题配置文件里设置。
+```
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at:
+    enable: true
+    another_day: true
+  categories: true
+```
+2. 添加文章字数与阅读时长统计
 {% tabs 步骤 %}
 <!-- tab -->
 安装插件：hexo-symbols-count-time
@@ -128,7 +143,7 @@ symbols_count_time:
 <!-- endtab -->
 {% endtabs %}
 
-2. 添加阅读量统计
+3. 添加阅读量统计
     busuanzi统计功能, 打开主题配置文件，找到代码所在位置进行修改
 ```
 # Show Views / Visitors of the website / page with busuanzi.
@@ -189,12 +204,13 @@ codeblock:
 }
 ```
 
-# 8.修改文章末尾标签样式
+# 8.修改标签图标
 修改文章底部的标签的图标，打开主题配置文件，找到tag_icon设为true
 ```
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
 ```
+
 # 9.修改网站底部样式
 添加时间起始日期，以及修改icon样式和颜色
 ```
@@ -263,9 +279,153 @@ footer:
         - '**/jquery.fancybox.pack.js'
         - '**/index.js'
   ```
- 3.再执行 hexo g 命令生成 public 目录文件时，会发现控制台有输出压缩日志
+  3.再执行 hexo g 命令生成 public 目录文件时，会发现控制台有输出压缩日志
 
- 后记：
+# 12.添加版权信息
+打开主题配置文件，找到creative_commons的位置将post设置为true。
+此处的版权声明可以选择在侧栏和文章的末尾两处显示。在侧栏显示版权声明我觉得有些突兀，所以我选择在文章末尾显示。
+```
+# Creative Commons 4.0 International License.
+# See: https://creativecommons.org/share-your-work/licensing-types-examples
+# Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+# You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
+# CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: true
+  language:
+```
+# 13.返回顶部
+你可以设定返回顶部按钮的位置和是否显示当前浏览位置的百分比。返回顶部按钮默认显示在页脚，如果你使用的是 Pisces 或者 Gemini 主题，设定 sidebar: true，则可显示在侧栏的底部。打开主题配置文件，找到back2top的位置按需设置：
+```
+back2top:
+  enable: true
+  # Back to top in sidebar.
+  sidebar: false
+  # Scroll percent label in b2t button.
+  scrollpercent: true
+```
+# 14.设置阅读进度条
+在页面顶部或底部边缘位置显示一个阅读进程的进度条，你可以自定义进度条的颜色和粗细。打开主题配置文件找到Reading progress bar位置进行设置。
+```
+# Reading progress bar
+reading_progress:
+  enable: true
+  # Available values: top | bottom
+  position: top
+  color: "#37c6c0"
+  height: 3px
+```
+# 15.添加书签
+在页面右上角添加一个书签图标，可以记录你阅读每一篇文章的位置，在你下次浏览该页面的时候，直接跳转到上一次浏览到的位置
+```
+# Bookmark Support
+bookmark:
+  enable: true
+  # Customize the color of the bookmark.
+  color: "#222"
+  # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
+  # If manual, only save it by clicking the bookmark-icon.
+  save: auto
+```
+# 16.首页文章摘要
+next主题默认全部展开的，阅读体验很不好，最佳的阅读体验应该是，在首页只能看到这篇文章的摘要，只有点击该篇文章才可阅读全文。这一部分的配置就是实现该功能的。相关设置在主题配置文件中。
+```
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
+```
+
+# 17.添加相关文章
+在文章的末尾添加相关（推荐）文章
+    - 安装插件
+    ```
+    npm install hexo-related-popular-posts –save
+    ```
+    - 添加脚本
+    在/themes/next/layout/_macro/post.swig文件里添加代码：
+    ```
+    {{ popular_posts( {} , post ) }} 
+    ```
+**bug：**无法设置标题且取消在首页显示相关阅读
+
+# 18.添加数学公式的支持
+持 MathJax 和 KaTeX 两种加载数学公式的方法，使用语法都是 LaTeX 语法。不过 MathJax 的功能比较全面，KaTeX 的加载速度比较快。z这里选择了MathJax, 默认的 per_page: true 的意思是，只有当你在文章设定中添加 mathjax: ture，才会在当前页面中加载公式渲染，所以如果要显示公式一定要在文章的开头添加。
+安装插件
+```
+cnpm uninstall hexo-renderer-marked --save
+cnpm install hexo-renderer-kramed --save
+```
+在主题配置文件中设置：
+```
+# Math Formulas Render Support
+math:
+  # Default (true) will load mathjax / katex script on demand.
+  # That is it only render those page which has `mathjax: true` in Front-matter.
+  # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
+  per_page: true
+
+  # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
+  mathjax:
+    enable: true
+    # See: https://mhchem.github.io/MathJax-mhchem/
+    mhchem: true
+```
+
+# 19.添加背景图片
+  - 在根目录路径~/source/_data创建/修改 styles.styl文件，并添加以下内容:
+  ```
+  // 添加背景图片
+  body {
+        background: url(/images/bg.jpg);//自己喜欢的图片地址
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+  }
+
+
+  // 标题栏背景
+  .site-meta {
+      padding: 20px 0;
+      color: #fff;
+      //background: $blue;
+      background-repeat: no-repeat;
+      background-attachment:fixed;
+      background-position:center;
+      background-size:cover;
+  }  
+
+  // 修改主体透明度
+  .main-inner{
+      background: #fff;
+      opacity: 0.95;
+  }
+
+  ```
+# 20.添加背景音乐
+- 生成网易云音乐外链
+  使用网络版网易云音乐，在播放界面点击生成外链，复制相关代码:
+  ```
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=357384&auto=1&height=66"></iframe>
+  ```
+- 添加代码到sidebar.swig
+  打开themes/next/layout/_macro/sidebar.swig 文件添加如下代码：
+  ```
+   {% if theme.background_music %}
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="{{ theme.background_music }}"></iframe>
+   {% endif %}
+  ```
+  位置放在</aside>上面，你也可以选择其他位置。
+- 在主题配置文件添加代码：
+  ```
+  # 添加背景音乐
+  background_music: //music.163.com/outchain/player?type=2&id=357384&auto=1&height=66
+  ```
+后记：
  主题next的新版本很多功能都集成到了next里面，只需要在主题配置文件里进行相关设置就可以，对比老版本，很多都需要写js脚本来实现。
 
  参考：https://blog.csdn.net/weixin_42905141/article/details/102677424
