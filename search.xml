@@ -129,7 +129,7 @@
 <h1 id="10-在文章末尾添加“文章结束”标记"><a href="#10-在文章末尾添加“文章结束”标记" class="headerlink" title="10.在文章末尾添加“文章结束”标记"></a>10.在文章末尾添加“文章结束”标记</h1><ul>
 <li>在根本目下~/source/文件夹下创建新的文件夹_data<br>新建文件passage-end-tag.swig，添加如下内容：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 文件结束语--&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line"> &#123;% if not is_index %&#125;</span><br><span class="line">     &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&amp;nbsp;&amp;nbsp&lt;i class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;&amp;nbsp感谢您的阅读-------------&lt;&#x2F;div&gt;</span><br><span class="line"> &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>打开主题配置文件，在末尾添加如下代码：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">enabled: true</span><br></pre></td></tr></table></figure>
+<li>打开主题配置文件，在末尾添加如下代码：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
