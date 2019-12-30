@@ -87,13 +87,13 @@ git clone -b <远程指定分支> <远程仓库地址> <本地文件夹名>
 git remote --v
 ## 15.换行符问题,统一linux风格
 ```
-提交/检出 不转换
+#提交/检出 不转换
 git config --global core.autocrlf false
  
-拒绝提交包含混合换行符的文件
+#拒绝提交包含混合换行符的文件
 git config --global core.safecrlf true
  
-设置区分大小写
+#设置区分大小写
 git config --global core.ignorecase false
 ```
 ## 16.新手使用git协同开发需注意
