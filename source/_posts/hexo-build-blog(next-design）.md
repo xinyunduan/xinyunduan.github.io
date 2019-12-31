@@ -427,6 +427,66 @@ math:
   # 添加背景音乐
   background_music: //music.163.com/outchain/player?type=2&id=357384&auto=1&height=66
   ```
+# 21.文末添加今日诗词
+[调用文档](https://www.jinrishici.com/doc/#json-fast-custom)
+```
+<!-- 文件位置：~/source/_data/body-end.swig -->
+
+<script src="//sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+<script>
+  console.log('今日诗词 - 开始加载...');
+  jinrishici.load((result) => {
+    let jrsc = document.getElementById('jrsc');
+    if (jrsc) {
+      console.log('今日诗词 - 标签获取成功.');
+    } else {
+      console.log('今日诗词 - 标签获取失败!');
+      return;
+    }
+    const data = result.data;
+    let author = data.origin.author;
+    let title = '《' + data.origin.title + '》';
+    let content = data.content.substr(0, data.content.length - 1);
+    let dynasty = data.origin.dynasty.substr(0, data.origin.dynasty.length - 1);
+    jrsc.innerText = content + ' @ ' + dynasty + '·' + author + title;
+    console.log('今日诗词 - 载入完毕.');
+  });
+</script>
+
+```
+
+# 22.取消归档页面的cheers语句
+归档页面的顶部会有一句鼓励的话，类似「嗯..! 目前共计 3 篇日志。 继续努力。」，我不太喜欢这句话，觉得有些多余。如果你想要去掉，找到themes/next/layout/archive.swig文件，改写源代码（也可以直接删除）
+
+```
+ {%- if theme.cheers.enable %}
+  <div class="collection-title">
+    {%- set posts_length = site.posts.length %}
+    {%- if posts_length > 210 %}
+      {%- set cheers = 'excellent' %}
+    {% elif posts_length > 130 %}
+      {%- set cheers = 'great' %}
+    {% elif posts_length > 80 %}
+      {%- set cheers = 'good' %}
+    {% elif posts_length > 50 %}
+      {%- set cheers = 'nice' %}
+    {% elif posts_length > 30 %}
+      {%- set cheers = 'ok' %}
+    {% else %}
+      {%- set cheers = 'um' %}
+    {%- endif %}
+    <span class="collection-header">{{ __('cheers.' + cheers) }}! {{ _p('counter.archive_posts', site.posts.length) }} {{ __('keep_on') }}</span>
+  </div>
+   {%- endif %}
+
+```
+
+- 打开主题配置文件添加代码：
+
+```
+# Enable "cheers" for archive page.
+cheers: false
+```
 后记：
  主题next的新版本很多功能都集成到了next里面，只需要在主题配置文件里进行相关设置就可以，对比老版本，很多都需要写js脚本来实现。
 

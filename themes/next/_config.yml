@@ -1040,3 +1040,6 @@ auto_excerpt:
 
 # 添加背景音乐
 background_music: //music.163.com/outchain/player?type=2&id=357384&auto=1&height=66
+
+# Enable "cheers" for archive page.
+cheers: false
