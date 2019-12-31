@@ -53,7 +53,7 @@
 <meta property="og:description" content="1.文章创建、更新和删除 创建文章首先需要进入你的博客的根目录下 1hexo new &quot;博客标题&quot; 之后会在&#x2F;source&#x2F;_posts&#x2F;目录下生成“博客标题.md”文件，然后就可以在该文件中采用markdown的方式写作。.md文件头部会自动生成title和date，如果要对文章进行标签和类别分类的需要手动加上。如下：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-11-30T18:13:00.000Z">
-<meta property="article:modified_time" content="2019-12-29T16:01:55.849Z">
+<meta property="article:modified_time" content="2019-12-31T16:52:34.255Z">
 <meta property="article:author" content="Duan Xinyun">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="next">
@@ -242,7 +242,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-30 00:01:55" itemprop="dateModified" datetime="2019-12-30T00:01:55+08:00">2019-12-30</time>
+                <time title="修改时间：2020-01-01 00:52:34" itemprop="dateModified" datetime="2020-01-01T00:52:34+08:00">2020-01-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,14 +269,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>8.9k</span>
+              <span>11k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
+              <span>10 分钟</span>
             </span>
 
         </div>
@@ -371,18 +371,25 @@
 <p><strong>bug：</strong> 无法设置标题且取消在首页显示相关阅读</p>
 <h1 id="18-添加数学公式的支持"><a href="#18-添加数学公式的支持" class="headerlink" title="18.添加数学公式的支持"></a>18.添加数学公式的支持</h1><p>持 MathJax 和 KaTeX 两种加载数学公式的方法，使用语法都是 LaTeX 语法。不过 MathJax 的功能比较全面，KaTeX 的加载速度比较快。z这里选择了MathJax, 默认的 per_page: true 的意思是，只有当你在文章设定中添加 mathjax: ture，才会在当前页面中加载公式渲染，所以如果要显示公式一定要在文章的开头添加。<br>安装插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall hexo-renderer-marked --save</span><br><span class="line">cnpm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure><br>在主题配置文件中设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Math Formulas Render Support</span><br><span class="line">math:</span><br><span class="line">  # Default (true) will load mathjax &#x2F; katex script on demand.</span><br><span class="line">  # That is it only render those page which has &#96;mathjax: true&#96; in Front-matter.</span><br><span class="line">  # If you set it to false, it will load mathjax &#x2F; katex srcipt EVERY PAGE.</span><br><span class="line">  per_page: true</span><br><span class="line"></span><br><span class="line">  # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.</span><br><span class="line">  mathjax:</span><br><span class="line">    enable: true</span><br><span class="line">    # See: https:&#x2F;&#x2F;mhchem.github.io&#x2F;MathJax-mhchem&#x2F;</span><br><span class="line">    mhchem: true</span><br></pre></td></tr></table></figure></p>
 <h1 id="19-添加背景图片"><a href="#19-添加背景图片" class="headerlink" title="19.添加背景图片"></a>19.添加背景图片</h1><ul>
-<li><p>在根目录路径~/source/_data创建/修改 styles.styl文件，并添加以下内容:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 添加背景图片</span><br><span class="line">body &#123;</span><br><span class="line">      background: url(&#x2F;images&#x2F;bg.jpg);&#x2F;&#x2F;自己喜欢的图片地址</span><br><span class="line">      background-size: cover;</span><br><span class="line">      background-repeat: no-repeat;</span><br><span class="line">      background-attachment: fixed;</span><br><span class="line">      background-position: 50% 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 标题栏背景</span><br><span class="line">.site-meta &#123;</span><br><span class="line">    padding: 20px 0;</span><br><span class="line">    color: #fff;</span><br><span class="line">    &#x2F;&#x2F;background: $blue;</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:center;</span><br><span class="line">    background-size:cover;</span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 修改主体透明度</span><br><span class="line">.main-inner&#123;</span><br><span class="line">    background: #fff;</span><br><span class="line">    opacity: 0.95;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>在根目录路径~/source/_data创建/修改 styles.styl文件，并添加以下内容:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 添加背景图片</span><br><span class="line">body &#123;</span><br><span class="line">      background: url(&#x2F;images&#x2F;bg.jpg);&#x2F;&#x2F;自己喜欢的图片地址</span><br><span class="line">      background-size: cover;</span><br><span class="line">      background-repeat: no-repeat;</span><br><span class="line">      background-attachment: fixed;</span><br><span class="line">      background-position: 50% 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 标题栏背景</span><br><span class="line">.site-meta &#123;</span><br><span class="line">    padding: 20px 0;</span><br><span class="line">    color: #fff;</span><br><span class="line">    &#x2F;&#x2F;background: $blue;</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:center;</span><br><span class="line">    background-size:cover;</span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 修改主体透明度</span><br><span class="line">.main-inner&#123;</span><br><span class="line">    background: #fff;</span><br><span class="line">    opacity: 0.95;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="20-添加背景音乐"><a href="#20-添加背景音乐" class="headerlink" title="20.添加背景音乐"></a>20.添加背景音乐</h1><ul>
 <li>生成网易云音乐外链<br>使用网络版网易云音乐，在播放界面点击生成外链，复制相关代码:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;330 height&#x3D;86 src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;357384&amp;auto&#x3D;1&amp;height&#x3D;66&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure></li>
 <li>添加代码到sidebar.swig<br>打开themes/next/layout/_macro/sidebar.swig 文件添加如下代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.background_music %&#125;</span><br><span class="line">   &lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; width&#x3D;330 height&#x3D;86 src&#x3D;&quot;&#123;&#123; theme.background_music &#125;&#125;&quot;&gt;&lt;&#x2F;iframe&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 位置放在&lt;/aside&gt;上面，你也可以选择其他位置。</li>
 <li>在主题配置文件添加代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 添加背景音乐</span><br><span class="line">background_music: &#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;357384&amp;auto&#x3D;1&amp;height&#x3D;66</span><br></pre></td></tr></table></figure>
-后记：<br>主题next的新版本很多功能都集成到了next里面，只需要在主题配置文件里进行相关设置就可以，对比老版本，很多都需要写js脚本来实现。</li>
-</ul>
-<p>参考：<a href="https://blog.csdn.net/weixin_42905141/article/details/102677424" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42905141/article/details/102677424</a></p>
+<h1 id="21-文末添加今日诗词"><a href="#21-文末添加今日诗词" class="headerlink" title="21.文末添加今日诗词"></a>21.文末添加今日诗词</h1><a href="https://www.jinrishici.com/doc/#json-fast-custom" target="_blank" rel="noopener">调用文档</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 文件位置：~&#x2F;source&#x2F;_data&#x2F;body-end.swig --&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src&#x3D;&quot;&#x2F;&#x2F;sdk.jinrishici.com&#x2F;v2&#x2F;browser&#x2F;jinrishici.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  console.log(&#39;今日诗词 - 开始加载...&#39;);</span><br><span class="line">  jinrishici.load((result) &#x3D;&gt; &#123;</span><br><span class="line">    let jrsc &#x3D; document.getElementById(&#39;jrsc&#39;);</span><br><span class="line">    if (jrsc) &#123;</span><br><span class="line">      console.log(&#39;今日诗词 - 标签获取成功.&#39;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      console.log(&#39;今日诗词 - 标签获取失败!&#39;);</span><br><span class="line">      return;</span><br><span class="line">    &#125;</span><br><span class="line">    const data &#x3D; result.data;</span><br><span class="line">    let author &#x3D; data.origin.author;</span><br><span class="line">    let title &#x3D; &#39;《&#39; + data.origin.title + &#39;》&#39;;</span><br><span class="line">    let content &#x3D; data.content.substr(0, data.content.length - 1);</span><br><span class="line">    let dynasty &#x3D; data.origin.dynasty.substr(0, data.origin.dynasty.length - 1);</span><br><span class="line">    jrsc.innerText &#x3D; content + &#39; @ &#39; + dynasty + &#39;·&#39; + author + title;</span><br><span class="line">    console.log(&#39;今日诗词 - 载入完毕.&#39;);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+</li>
+</ul>
+<h1 id="22-取消归档页面的cheers语句"><a href="#22-取消归档页面的cheers语句" class="headerlink" title="22.取消归档页面的cheers语句"></a>22.取消归档页面的cheers语句</h1><p>归档页面的顶部会有一句鼓励的话，类似「嗯..! 目前共计 3 篇日志。 继续努力。」，我不太喜欢这句话，觉得有些多余。如果你想要去掉，找到themes/next/layout/archive.swig文件，改写源代码（也可以直接删除）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;%- if theme.cheers.enable %&#125;</span><br><span class="line"> &lt;div class&#x3D;&quot;collection-title&quot;&gt;</span><br><span class="line">   &#123;%- set posts_length &#x3D; site.posts.length %&#125;</span><br><span class="line">   &#123;%- if posts_length &gt; 210 %&#125;</span><br><span class="line">     &#123;%- set cheers &#x3D; &#39;excellent&#39; %&#125;</span><br><span class="line">   &#123;% elif posts_length &gt; 130 %&#125;</span><br><span class="line">     &#123;%- set cheers &#x3D; &#39;great&#39; %&#125;</span><br><span class="line">   &#123;% elif posts_length &gt; 80 %&#125;</span><br><span class="line">     &#123;%- set cheers &#x3D; &#39;good&#39; %&#125;</span><br><span class="line">   &#123;% elif posts_length &gt; 50 %&#125;</span><br><span class="line">     &#123;%- set cheers &#x3D; &#39;nice&#39; %&#125;</span><br><span class="line">   &#123;% elif posts_length &gt; 30 %&#125;</span><br><span class="line">     &#123;%- set cheers &#x3D; &#39;ok&#39; %&#125;</span><br><span class="line">   &#123;% else %&#125;</span><br><span class="line">     &#123;%- set cheers &#x3D; &#39;um&#39; %&#125;</span><br><span class="line">   &#123;%- endif %&#125;</span><br><span class="line">   &lt;span class&#x3D;&quot;collection-header&quot;&gt;&#123;&#123; __(&#39;cheers.&#39; + cheers) &#125;&#125;! &#123;&#123; _p(&#39;counter.archive_posts&#39;, site.posts.length) &#125;&#125; &#123;&#123; __(&#39;keep_on&#39;) &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;</span><br><span class="line">  &#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>打开主题配置文件添加代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Enable &quot;cheers&quot; for archive page.</span><br><span class="line">cheers: false</span><br></pre></td></tr></table></figure>
+<p>后记：<br> 主题next的新版本很多功能都集成到了next里面，只需要在主题配置文件里进行相关设置就可以，对比老版本，很多都需要写js脚本来实现。</p>
+<p> 参考：<a href="https://blog.csdn.net/weixin_42905141/article/details/102677424" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42905141/article/details/102677424</a></p>
 
     </div>
 
@@ -393,9 +400,40 @@
 <!-- 文件结束语-->
  <div>
     
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束&nbsp;&nbsp<i class="fa fa-heart"></i>&nbsp;&nbsp感谢您的阅读-------------</div>
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束啦&nbsp;&nbsp<i class="fa fa-heart"></i>&nbsp;&nbsp感谢您的阅读-------------</div>
     
  </div>
+
+ <!-- 文件位置：~/source/_data/body-end.swig -->
+
+<script src="//sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+<script>
+  console.log('今日诗词 - 开始加载...');
+  jinrishici.load((result) => {
+    let jrsc = document.getElementById('jrsc');
+    if (jrsc) {
+      console.log('今日诗词 - 标签获取成功.');
+    } else {
+      console.log('今日诗词 - 标签获取失败!');
+      return;
+    }
+    const data = result.data;
+    let author = data.origin.author;
+    let title = '《' + data.origin.title + '》';
+    let content = data.content.substr(0, data.content.length - 1);
+    let dynasty = data.origin.dynasty.substr(0, data.origin.dynasty.length - 1);
+    jrsc.innerText = content + ' @ ' + dynasty + '·' + author + title;
+    console.log('今日诗词 - 载入完毕.');
+    /*
+    if (data.origin.author == '李白') {
+      let audio = document.createElement("audio");
+      audio.src = "/ding.mp3";
+      audio.play();
+    } */
+  }); 
+
+</script>
+<div style="text-align: center"><span id="jrsc" >正在加载今日诗词....</span></div>
         
 
 <div>
@@ -476,7 +514,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-文章创建、更新和删除"><span class="nav-number">1.</span> <span class="nav-text">1.文章创建、更新和删除</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-主题自带样式"><span class="nav-number">2.</span> <span class="nav-text">2.主题自带样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-添加文章评论功能"><span class="nav-number">3.</span> <span class="nav-text">3.添加文章评论功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-文章元数据"><span class="nav-number">4.</span> <span class="nav-text">4.文章元数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-添加右上角forke-me-on-github"><span class="nav-number">5.</span> <span class="nav-text">5.添加右上角forke-me-on-github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-添加代码块复制功能"><span class="nav-number">6.</span> <span class="nav-text">6.添加代码块复制功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-修改文章内链接文本样式"><span class="nav-number">7.</span> <span class="nav-text">7.修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-修改标签图标"><span class="nav-number">8.</span> <span class="nav-text">8.修改标签图标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-修改网站底部样式"><span class="nav-number">9.</span> <span class="nav-text">9.修改网站底部样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-在文章末尾添加“文章结束”标记"><span class="nav-number">10.</span> <span class="nav-text">10.在文章末尾添加“文章结束”标记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-使用-hexo-neat-插件压缩页面资源"><span class="nav-number">11.</span> <span class="nav-text">11.使用 hexo-neat 插件压缩页面资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-添加版权信息"><span class="nav-number">12.</span> <span class="nav-text">12.添加版权信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-返回顶部"><span class="nav-number">13.</span> <span class="nav-text">13.返回顶部</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14-设置阅读进度条"><span class="nav-number">14.</span> <span class="nav-text">14.设置阅读进度条</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15-添加书签"><span class="nav-number">15.</span> <span class="nav-text">15.添加书签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16-首页文章摘要"><span class="nav-number">16.</span> <span class="nav-text">16.首页文章摘要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#17-添加相关文章"><span class="nav-number">17.</span> <span class="nav-text">17.添加相关文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#18-添加数学公式的支持"><span class="nav-number">18.</span> <span class="nav-text">18.添加数学公式的支持</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#19-添加背景图片"><span class="nav-number">19.</span> <span class="nav-text">19.添加背景图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20-添加背景音乐"><span class="nav-number">20.</span> <span class="nav-text">20.添加背景音乐</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-文章创建、更新和删除"><span class="nav-number">1.</span> <span class="nav-text">1.文章创建、更新和删除</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-主题自带样式"><span class="nav-number">2.</span> <span class="nav-text">2.主题自带样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-添加文章评论功能"><span class="nav-number">3.</span> <span class="nav-text">3.添加文章评论功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-文章元数据"><span class="nav-number">4.</span> <span class="nav-text">4.文章元数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-添加右上角forke-me-on-github"><span class="nav-number">5.</span> <span class="nav-text">5.添加右上角forke-me-on-github</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-添加代码块复制功能"><span class="nav-number">6.</span> <span class="nav-text">6.添加代码块复制功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-修改文章内链接文本样式"><span class="nav-number">7.</span> <span class="nav-text">7.修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-修改标签图标"><span class="nav-number">8.</span> <span class="nav-text">8.修改标签图标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-修改网站底部样式"><span class="nav-number">9.</span> <span class="nav-text">9.修改网站底部样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-在文章末尾添加“文章结束”标记"><span class="nav-number">10.</span> <span class="nav-text">10.在文章末尾添加“文章结束”标记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-使用-hexo-neat-插件压缩页面资源"><span class="nav-number">11.</span> <span class="nav-text">11.使用 hexo-neat 插件压缩页面资源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-添加版权信息"><span class="nav-number">12.</span> <span class="nav-text">12.添加版权信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-返回顶部"><span class="nav-number">13.</span> <span class="nav-text">13.返回顶部</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14-设置阅读进度条"><span class="nav-number">14.</span> <span class="nav-text">14.设置阅读进度条</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15-添加书签"><span class="nav-number">15.</span> <span class="nav-text">15.添加书签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#16-首页文章摘要"><span class="nav-number">16.</span> <span class="nav-text">16.首页文章摘要</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#17-添加相关文章"><span class="nav-number">17.</span> <span class="nav-text">17.添加相关文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#18-添加数学公式的支持"><span class="nav-number">18.</span> <span class="nav-text">18.添加数学公式的支持</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#19-添加背景图片"><span class="nav-number">19.</span> <span class="nav-text">19.添加背景图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#20-添加背景音乐"><span class="nav-number">20.</span> <span class="nav-text">20.添加背景音乐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#21-文末添加今日诗词"><span class="nav-number">21.</span> <span class="nav-text">21.文末添加今日诗词</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#22-取消归档页面的cheers语句"><span class="nav-number">22.</span> <span class="nav-text">22.取消归档页面的cheers语句</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -543,7 +581,7 @@
 <div class="copyright">
   
   &copy; 2018 – 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -552,12 +590,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">24k</span>
+    <span title="站点总字数">26k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">21 分钟</span>
+    <span title="站点阅读时长">23 分钟</span>
 </div>
 
         
