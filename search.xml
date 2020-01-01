@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>git基本操作</title>
-    <url>/article/ab9e1965.html</url>
+    <url>/archives/article/ab9e1965.html</url>
     <content><![CDATA[<h2 id="1-初始化本地项目"><a href="#1-初始化本地项目" class="headerlink" title="1.初始化本地项目"></a>1.初始化本地项目</h2><pre><code>1.现在本地新建一个文档，比如：D:\gitproject
 2.进入D:\gitproject目录下，右键选择git bash进入git命令模式
 3.git init初始化一个git项目
@@ -47,7 +47,7 @@
   </entry>
   <entry>
     <title>hexo搭建个人博客（备份和迁移）</title>
-    <url>/article/8f8bb064.html</url>
+    <url>/archives/article/8f8bb064.html</url>
     <content><![CDATA[<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>一般情况下，我们博客的相关配置信息都是在本地操作的, 但是当我们更换了设备或者电脑出现故障了等，那么我们便无法再维护我们的博客了。因而为了保护我们的劳动成果以及将来能更方便的维护博客，我们需要对博客进行备份和迁移，也就是将博客的相关配置信息上传到github上进行托管。日后有必要的时候可以从github上克隆到本地进行博客的维护等操作。<br><a id="more"></a> </p>
 <h1 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h1><p>在搭建博客的时候，我们已经将博客部署到了github上去，其实部署上去只是生成的静态文件。因而还需要将hexo生成的网站源文件也push到github上。这个时候需要再github上创建分支，其中主分支master已经存放了生成的静态网页。</p>
 <h1 id="三、处理流程"><a href="#三、处理流程" class="headerlink" title="三、处理流程"></a>三、处理流程</h1><h2 id="1-预处理"><a href="#1-预处理" class="headerlink" title="1.预处理"></a>1.预处理</h2><p>将hexo的主题下的.git删除，比如删除themes/next/目录下的.git否则无法将主题文件夹push。<br>在本地D:blog文件夹下创建文件.gitignore，正常情况这个文件是自动生成的，打开后写入：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules&#x2F;</span><br><span class="line">public&#x2F;</span><br><span class="line">.deploy*&#x2F;</span><br></pre></td></tr></table></figure><br>这个文件的存在是指在push的时候忽略文件中的文件格式。</p>
@@ -68,7 +68,7 @@
   </entry>
   <entry>
     <title>hexo搭建个人博客（next主题优化）</title>
-    <url>/article/c023416d.html</url>
+    <url>/archives/article/c023416d.html</url>
     <content><![CDATA[<h1 id="1-文章创建、更新和删除"><a href="#1-文章创建、更新和删除" class="headerlink" title="1.文章创建、更新和删除"></a>1.文章创建、更新和删除</h1><ul>
 <li><p>创建文章<br>首先需要进入你的博客的根目录下</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;博客标题&quot;</span><br></pre></td></tr></table></figure>
@@ -194,7 +194,7 @@
   </entry>
   <entry>
     <title>hexo搭建个人博客（next主题基础配置）</title>
-    <url>/article/3e935e30.html</url>
+    <url>/archives/article/3e935e30.html</url>
     <content><![CDATA[<p>过上一步的努力，我们终于搭建好了一个属于自己的博客框架，并且还安装了next主题，但是博客的结构还比较捡漏，接下来我们需要把她美化一下，本文主要是针对next主题的美化。进入到hexo生成的博客目录，如D:blog/， <strong>所有的hexo命令都是在该路径下执行</strong><br>hexo的站点配置详解<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">官方配置说明</a><br><a id="more"></a> </p>
 <h1 id="一、添加基本信息"><a href="#一、添加基本信息" class="headerlink" title="一、添加基本信息"></a>一、添加基本信息</h1><p>基本信息主要包括博客标题、副标题、博客描述、作者姓名、头像等。<br>打开站点配置文件_config.yml，对着官网的参数详解根绝个人喜好添加信息。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 咸鱼翻身</span><br><span class="line">subtitle: Viva La Vida</span><br><span class="line">description: Brainy is the new sexy</span><br><span class="line">keywords:</span><br><span class="line">author: Duan Xinyun</span><br><span class="line">language: zh-Hans</span><br><span class="line">timezone: Asia&#x2F;Shanghai</span><br></pre></td></tr></table></figure></p>
 <h1 id="二、next主题的样式选择与配置"><a href="#二、next主题的样式选择与配置" class="headerlink" title="二、next主题的样式选择与配置"></a>二、next主题的样式选择与配置</h1><p>打开themes/next/目录下的主题配置文件_config.yml，<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">next官方配置说明</a><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Scheme Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure><br>选择next的样式，只能选择其中一个样式，选中哪一个样式就删除前面的注释符号（#），不用的就注释掉。</p>
@@ -219,7 +219,7 @@
   </entry>
   <entry>
     <title>hexo搭建个人博客（安装与部署）</title>
-    <url>/article/e34689fc.html</url>
+    <url>/archives/article/e34689fc.html</url>
     <content><![CDATA[<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以将生成的网站部署并托管到github上。<br>在搭建博客之前首先需要有一个github账号并且配置了SSH Keys（<a href="https://www.cnblogs.com/zzw731862651/p/9327632.html" target="_blank" rel="noopener">git生成ssh key</a>），还需要安装git、安装node.js和安装hexo。<br><a id="more"></a><br>本篇博客相关安装说明：<br>node版本：Node.js v12.14.0.<br>hexo版本：hexo: 4.2.0<br>主题next版本：NexT.Gemini v7.6.0</p>
 <h1 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h1><h2 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h2><p>直接下载git安装到本地，打开cmd输入：git —version<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><br>如果输出git的版本信息说明安装成功。</p>
 <h2 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h2><p>直接下载node.js安装到本地，打开cmd输入：node -v<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure><br>如果输出git的版本信息说明安装成功。</p>
