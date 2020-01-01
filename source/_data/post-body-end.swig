@@ -19,7 +19,7 @@
 <!-- 文件结束语-->
  <div>
     {% if not is_index %}
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束啦&nbsp;&nbsp<i class="fa fa-heart"></i>&nbsp;&nbsp感谢您的阅读-------------</div>
+        <div style="text-align:center;color: #ccc;font-size:16px;">-------------本文结束啦&nbsp;&nbsp<i class="fa fa-heart"></i>&nbsp;&nbsp感谢您的阅读-------------</div>
     {% endif %}
  </div>
 
