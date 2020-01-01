@@ -12,8 +12,8 @@ language: zh-CN
 timezone: Asia/Shanghai
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://xinyunduan.github.io/archives
-root: /archives/
+url: https://xinyunduan.github.io/
+root: /
 #permalink: :year/:month/:day/:title/
 permalink: article/:abbrlink.html
 abbrlink:
