@@ -1,10 +1,11 @@
 ---
 title: hexo搭建个人博客（安装与部署）
-date: 2018-11-25 09:18:49
 categories: 工具
-tags: 
+tags:
   - hexo
   - next
+abbrlink: e34689fc
+date: 2018-11-25 09:18:49
 ---
 
 # 一、前言

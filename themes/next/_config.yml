@@ -280,8 +280,8 @@ reward:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
-  title: 相关文章推荐 # Custom header, leave empty to use the default one
+  enable: true
+  title: 相关阅读 # Custom header, leave empty to use the default one
   display_in_home: true #不在详情页显示相关文章
   params:
     maxCount: 5
@@ -850,8 +850,9 @@ motion:
 # Progress bar in the top during page loading.
 # Dependencies: https://github.com/theme-next/theme-next-pace
 # For more information: https://github.com/HubSpot/pace
+# 修改加载特效
 pace:
-  enable: false
+  enable: true
   # Themes list:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
@@ -1043,3 +1044,8 @@ background_music: //music.163.com/outchain/player?type=2&id=357384&auto=1&height
 
 # Enable "cheers" for archive page.
 cheers: false
+
+# 添加近期文章
+recent_posts: false
+recent_posts_title: 近期文章
+recent_posts_layout: block

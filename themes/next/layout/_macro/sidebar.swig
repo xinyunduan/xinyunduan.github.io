@@ -30,7 +30,6 @@
         {%- endif %}
       </div>
       <!--/noindex-->
-
       <div class="site-overview-wrap sidebar-panel">
         {{ partial('_partials/sidebar/site-overview.swig', {}, {cache: theme.cache.enable}) }}
 
@@ -44,9 +43,10 @@
         </div>
       {%- endif %}
     </div>
-        {% if theme.background_music %}
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="{{ theme.background_music }}"></iframe>
-        {% endif %}
+     <!-- 添加网易云音乐 -->
+     {% if theme.background_music %}
+       <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="{{ theme.background_music }}"></iframe>
+     {% endif %}
   </aside>
   <div id="sidebar-dimmer"></div>
 {% endmacro %}

@@ -1,10 +1,11 @@
 ---
 title: hexo搭建个人博客（备份和迁移）
-date: 2018-12-03 19:14:50
-tags: 
-   - hexo
-   - next
+tags:
+  - hexo
+  - next
 categories: 工具
+abbrlink: 8f8bb064
+date: 2018-12-03 19:14:50
 ---
 
 # 一、前言

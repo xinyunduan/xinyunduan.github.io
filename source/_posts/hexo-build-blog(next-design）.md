@@ -1,10 +1,11 @@
 ---
 title: hexo搭建个人博客（next主题优化）
-date: 2018-12-01:02:13
-tags: 
+date: '2018-12-01:02:13'
+tags:
   - hexo
   - next
 categories: 工具
+abbrlink: c023416d
 ---
 
 # 1.文章创建、更新和删除
@@ -203,15 +204,23 @@ codeblock:
   }
 }
 ```
+# 8.文章开启阅读更多按钮
+如果不开启阅读更多按钮的话，默认是展示文章中所有内容的，这显然体验不好。
+一般都会在文章中插入 <!--more--> 这种注释形式表示首页展示到注释处为止。或者会使用如下官方配置文件中自带的方式。一般都推荐使用注释的方式，因为下面这种 auto_excerpt 方式不会保留前面的行文样式，但是注释方式会保留样式。在主题配置文件中搜索 auto_excerpt，找到如下：
+```
+auto_excerpt:
+  enable: true
+  length: 150 #到多少字数后不显示
+```
 
-# 8.修改标签图标
+# 9.修改标签图标
 修改文章底部的标签的图标，打开主题配置文件，找到tag_icon设为true
 ```
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: true
 ```
 
-# 9.修改网站底部样式
+# 10.修改网站底部样式
 添加时间起始日期，以及修改icon样式和颜色
 ```
 footer:
@@ -228,7 +237,7 @@ footer:
     # Change the color of icon, using Hex Code.
     color: "#ff0033" #红色
  ```
-# 10.在文章末尾添加“文章结束”标记
+# 11.在文章末尾添加“文章结束”标记
    - 在根本目下~/source/文件夹下创建新的文件夹_data
    新建文件passage-end-tag.swig，添加如下内容：
    ```
@@ -246,7 +255,7 @@ footer:
     enabled: true
   ```
    
-# 11.使用 hexo-neat 插件压缩页面资源
+# 12.使用 hexo-neat 插件压缩页面资源
   1.像安装其它插件一样，在站点的根目录 npm 安装插件：
   ```
   cnpm install hexo-neat --save
@@ -281,7 +290,7 @@ footer:
   ```
   3.再执行 hexo g 命令生成 public 目录文件时，会发现控制台有输出压缩日志
 
-# 12.添加版权信息
+# 13.添加版权信息
 打开主题配置文件，找到creative_commons的位置将post设置为true。
 此处的版权声明可以选择在侧栏和文章的末尾两处显示。在侧栏显示版权声明我觉得有些突兀，所以我选择在文章末尾显示。
 ```
@@ -296,7 +305,7 @@ creative_commons:
   post: true
   language:
 ```
-# 13.返回顶部
+# 14.返回顶部
 你可以设定返回顶部按钮的位置和是否显示当前浏览位置的百分比。返回顶部按钮默认显示在页脚，如果你使用的是 Pisces 或者 Gemini 主题，设定 sidebar: true，则可显示在侧栏的底部。打开主题配置文件，找到back2top的位置按需设置：
 ```
 back2top:
@@ -306,7 +315,7 @@ back2top:
   # Scroll percent label in b2t button.
   scrollpercent: true
 ```
-# 14.设置阅读进度条
+# 15.设置阅读进度条
 在页面顶部或底部边缘位置显示一个阅读进程的进度条，你可以自定义进度条的颜色和粗细。打开主题配置文件找到Reading progress bar位置进行设置。
 ```
 # Reading progress bar
@@ -317,7 +326,7 @@ reading_progress:
   color: "#37c6c0"
   height: 3px
 ```
-# 15.添加书签
+# 16.添加书签
 在页面右上角添加一个书签图标，可以记录你阅读每一篇文章的位置，在你下次浏览该页面的时候，直接跳转到上一次浏览到的位置
 ```
 # Bookmark Support
@@ -329,7 +338,7 @@ bookmark:
   # If manual, only save it by clicking the bookmark-icon.
   save: auto
 ```
-# 16.首页文章摘要
+# 17.首页文章摘要
 next主题默认全部展开的，阅读体验很不好，最佳的阅读体验应该是，在首页只能看到这篇文章的摘要，只有点击该篇文章才可阅读全文。这一部分的配置就是实现该功能的。相关设置在主题配置文件中。
 ```
 # Automatically scroll page to section which is under <!-- more --> mark.
@@ -339,7 +348,7 @@ scroll_to_more: true
 excerpt_description: true
 ```
 
-# 17.添加相关文章
+# 18.添加相关文章
 在文章的末尾添加相关（推荐）文章
   - 安装插件
     ```
@@ -354,7 +363,7 @@ excerpt_description: true
 
 **bug：** 无法设置标题且取消在首页显示相关阅读
 
-# 18.添加数学公式的支持
+# 19.添加数学公式的支持
 持 MathJax 和 KaTeX 两种加载数学公式的方法，使用语法都是 LaTeX 语法。不过 MathJax 的功能比较全面，KaTeX 的加载速度比较快。z这里选择了MathJax, 默认的 per_page: true 的意思是，只有当你在文章设定中添加 mathjax: ture，才会在当前页面中加载公式渲染，所以如果要显示公式一定要在文章的开头添加。
 安装插件
 ```
@@ -377,7 +386,7 @@ math:
     mhchem: true
 ```
 
-# 19.添加背景图片
+# 20.添加背景图片
   - 在根目录路径~/source/_data创建/修改 styles.styl文件，并添加以下内容:
   ```
   // 添加背景图片
@@ -408,7 +417,7 @@ math:
   }
 
   ```
-# 20.添加背景音乐
+# 21.添加背景音乐
 - 生成网易云音乐外链
   使用网络版网易云音乐，在播放界面点击生成外链，复制相关代码:
   ```
@@ -427,7 +436,7 @@ math:
   # 添加背景音乐
   background_music: //music.163.com/outchain/player?type=2&id=357384&auto=1&height=66
   ```
-# 21.文末添加今日诗词
+# 22.文末添加今日诗词
 [调用文档](https://www.jinrishici.com/doc/#json-fast-custom)
 ```
 <!-- 文件位置：~/source/_data/body-end.swig -->
@@ -455,7 +464,7 @@ math:
 
 ```
 
-# 22.取消归档页面的cheers语句
+# 23.取消归档页面的cheers语句
 归档页面的顶部会有一句鼓励的话，类似「嗯..! 目前共计 3 篇日志。 继续努力。」，我不太喜欢这句话，觉得有些多余。如果你想要去掉，找到themes/next/layout/archive.swig文件，改写源代码（也可以直接删除）
 
 ```
@@ -482,12 +491,102 @@ math:
 ```
 
 - 打开主题配置文件添加代码：
-
 ```
 # Enable "cheers" for archive page.
 cheers: false
 ```
-后记：
- 主题next的新版本很多功能都集成到了next里面，只需要在主题配置文件里进行相关设置就可以，对比老版本，很多都需要写js脚本来实现。
 
- 参考：https://blog.csdn.net/weixin_42905141/article/details/102677424
+# 24.添加文章推荐
+- 安装相关插件
+```
+npm install hexo-related-popular-posts --save
+```
+- 设置主题配置文件，找到related_posts
+```
+related_posts:
+  enable: true  # 是否开启
+  title: 相关文章推荐    # 标题
+  display_in_home: false # 是否在首页显示，建议为false
+  params:
+    maxCount: 5   # 相关文章的最大数量
+    #PPMixingRate: 0.0
+    #isDate: false
+    #isImage: false
+    #isExcerpt: false
+```
+
+# 25.修改加载特效
+由于网页不可能一直都秒进，总会等待一段时间的，所以可以修改一下加载的特效。Next 已经集成了很多加载特效，可以在下面选项中在线调试测试一下。
+搜索 pace，找到如下代码：
+```
+pace:
+  enable: true
+  # Themes list:
+  # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
+  # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
+  theme: minimal
+```
+
+# 25.添加近期文章板块
+- 在 next/layout/_partials/sidebar/site-overview.swig 中的 if theme.links 对应的 endif 后面添加以下代码：
+```
+<!--近期文章版块 began-->
+ {% if theme.recent_posts %}
+    <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.recent_posts_layout  }}">
+       <div class="links-of-blogroll-title">
+          <i class="fa fa-history fa-{{ theme.recent_posts_icon | lower }}" aria-hidden="true"></i>
+          {{ theme.recent_posts_title }}
+       </div>
+        <ul class="links-of-blogroll-list">
+          {% set posts = site.posts.sort('-date') %}
+          {% for post in posts.slice('0', '5') %}
+            <li class='my-links-of-blogroll-li'>
+              <a href="{{ url_for(post.path) }}" title="{{ post.title }}" target="">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+  {% endif %}
+  ```
+- 为了配置方便，在主题的 _config.yml 中添加了几个变量，如下：
+```
+recent_posts_title: 近期文章
+recent_posts_layout: block
+recent_posts: true
+```
+# 26.去掉详情页url后面的"#more"
+打开/themes/next/layout/_macro/post.swig，找到如下代码:
+```
+ {%- if theme.read_more_btn %}
+   <div class="post-button">
+      <a class="btn" href="{{ url_for(post.path) }}#more" rel="contents">
+        {{ __('post.read_more') }} &raquo;
+      </a>
+    </div>
+ {%- endif %}
+```
+将#more删掉。
+
+# 27.修改永久链接的默认格式
+如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 SEO，且 gitment 评论对中文链接也不支持。
+在Hexo根目录下的 _config.yml 文件采用初始设置。这里因为用“年月日”会让文章链接的层次太深，所以我用"article"代替：
+```
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://xinyunduan.github.io/
+root: /archives/
+#permalink: :year/:month/:day/:title/
+permalink: article/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  #rep: hex    # 进制：dec(default) and hex
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+```
+在Hexo的根目录下安装插件：
+```
+npm install hexo-abbrlink --save
+```
+打开网站就可以看到效果：http://localhost:4000/article/ab9e1965.html

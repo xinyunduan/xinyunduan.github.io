@@ -1,10 +1,12 @@
 ---
 title: git基本操作
+tags:
+  - git
+categories:
+  - - git
+    - 工具
+abbrlink: ab9e1965
 date: 2019-12-26 22:47:18
-tags: 
-   - git
-categories: 
-   - [git, 工具]
 ---
 ## 1.初始化本地项目
     1.现在本地新建一个文档，比如：D:\gitproject
