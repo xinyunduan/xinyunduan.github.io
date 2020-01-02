@@ -3,10 +3,8 @@
   <entry>
     <title>git基本操作</title>
     <url>/article/ab9e1965.html</url>
-    <content><![CDATA[<h2 id="1-初始化本地项目"><a href="#1-初始化本地项目" class="headerlink" title="1.初始化本地项目"></a>1.初始化本地项目</h2><pre><code>1.现在本地新建一个文档，比如：D:\gitproject
-2.进入D:\gitproject目录下，右键选择git bash进入git命令模式
-3.git init初始化一个git项目
-</code></pre><h2 id="2-从远端仓库克隆一个项目到本地"><a href="#2-从远端仓库克隆一个项目到本地" class="headerlink" title="2.从远端仓库克隆一个项目到本地"></a>2.从远端仓库克隆一个项目到本地</h2><p>   从远端仓库克隆项目到本地，如D:\gitproject\目录下，命令：<br>   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone github地址</span><br></pre></td></tr></table></figure><br><a id="more"></a> </p>
+    <content><![CDATA[<h2 id="1-初始化本地项目"><a href="#1-初始化本地项目" class="headerlink" title="1.初始化本地项目"></a>1.初始化本地项目</h2><p>  1.现在本地新建一个文档，比如：D:\gitproject<br>  2.进入D:\gitproject目录下，右键选择git bash进入git命令模式<br>  3.git init初始化一个git项目</p>
+<h2 id="2-从远端仓库克隆一个项目到本地"><a href="#2-从远端仓库克隆一个项目到本地" class="headerlink" title="2.从远端仓库克隆一个项目到本地"></a>2.从远端仓库克隆一个项目到本地</h2><p> 从远端仓库克隆项目到本地，如D:\gitproject\目录下，命令：<br>   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone github地址</span><br></pre></td></tr></table></figure><br><a id="more"></a> </p>
 <h2 id="3-绑定远程仓库："><a href="#3-绑定远程仓库：" class="headerlink" title="3.绑定远程仓库："></a>3.绑定远程仓库：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote add origin github地址</span><br></pre></td></tr></table></figure>
 <h2 id="4-新建分支并进入分支进行操作"><a href="#4-新建分支并进入分支进行操作" class="headerlink" title="4.新建分支并进入分支进行操作"></a>4.新建分支并进入分支进行操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch 分支名</span><br><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
 <p>也可以直接用:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure></p>
