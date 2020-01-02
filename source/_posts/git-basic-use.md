@@ -9,12 +9,12 @@ abbrlink: ab9e1965
 date: 2019-12-26 22:47:18
 ---
 ## 1.初始化本地项目
-    1.现在本地新建一个文档，比如：D:\gitproject
-    2.进入D:\gitproject目录下，右键选择git bash进入git命令模式
-    3.git init初始化一个git项目
+  1.现在本地新建一个文档，比如：D:\gitproject
+  2.进入D:\gitproject目录下，右键选择git bash进入git命令模式
+  3.git init初始化一个git项目
 
 ## 2.从远端仓库克隆一个项目到本地
-   从远端仓库克隆项目到本地，如D:\gitproject\目录下，命令：
+ 从远端仓库克隆项目到本地，如D:\gitproject\目录下，命令：
    ```
    git clone github地址
    ```
