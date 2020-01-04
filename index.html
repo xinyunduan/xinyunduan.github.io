@@ -215,94 +215,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xinyunduan.github.io/article/d66ff0fb.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="Duan Xinyun">
-      <meta itemprop="description" content="Brainy is the new sexy">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咸鱼翻身">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/article/d66ff0fb.html" class="post-title-link" itemprop="url">贝叶斯算法</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-04 22:12:49 / 修改时间：22:31:26" itemprop="dateCreated datePublished" datetime="2020-01-04T22:12:49+08:00">2020-01-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>152</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1、贝叶斯要解决的问题"><a href="#1、贝叶斯要解决的问题" class="headerlink" title="1、贝叶斯要解决的问题"></a>1、贝叶斯要解决的问题</h1><p>正向概率：已知袋子中有N个白球和M个黑球，摸到白球的概率多大？</p>
-<p>逆向概率：事先不知道袋子中黑白球的比例，通过摸出来球的颜色来判断球的比例。</p>
-<p>贝叶斯是在概率的框架下实施决策的节本方法。对分类来说，在所有相关概率都已知的理想情形下，贝叶斯考虑如何基于这些概率和误判损失来按着最优的类别标记。</p>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://xinyunduan.github.io/article/24a04a3e.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -328,7 +240,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-04 10:19:34 / 修改时间：22:12:04" itemprop="dateCreated datePublished" datetime="2020-01-04T10:19:34+08:00">2020-01-04</time>
+              <time title="创建时间：2020-01-04 10:19:34 / 修改时间：22:39:25" itemprop="dateCreated datePublished" datetime="2020-01-04T10:19:34+08:00">2020-01-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -368,121 +280,15 @@
 
       
           <p>Task01：数组（1天）<br>理论部分</p>
-<p>理解数组的存储与分类。<br>实现动态数组，该数组能够根据需要修改数组的长度。<br>练习部分</p>
-<h3 id="1-利用动态数组解决数据存放问题"><a href="#1-利用动态数组解决数据存放问题" class="headerlink" title="1.利用动态数组解决数据存放问题"></a>1.利用动态数组解决数据存放问题</h3><p>编写一段代码，要求输入一个整数N，用动态数组A来存放2~N之间所有5或7的倍数，输出该数组。</p>
-<p>示例：</p>
-<p>输入：<br>N = 100 </p>
-<p>输出：<br>5 7 10 14 15 20 21 25 28 30 35 40 42 45 49 50 55 56 60 63 65 70 75 77 80 84 85 90 91 95 98 100<br>1.方法一<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def isToeplitzMatrix(num:int):</span><br><span class="line">    data &#x3D; []</span><br><span class="line">    for i in range(1, num+1):</span><br><span class="line">        if i % 5 &#x3D;&#x3D; 0:</span><br><span class="line">            data.append(i)</span><br><span class="line">        elif i % 7 &#x3D;&#x3D; 0:</span><br><span class="line">            data.append(i)</span><br><span class="line">    return &quot; &quot;.join(map(str,data))</span><br></pre></td></tr></table></figure><br>2.方法二<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def isToeplitzMatrix(num:int):</span><br><span class="line">    data &#x3D; []</span><br><span class="line">    for i in range(1, num+1):</span><br><span class="line">        if i * 5 &lt;&#x3D; num:</span><br><span class="line">            data.append(i)</span><br><span class="line">            if i * 7 &lt;&#x3D; num:</span><br><span class="line">                data.append(i)</span><br><span class="line">    return &quot; &quot;.join(map(str,data))</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-托普利茨矩阵问题"><a href="#2-托普利茨矩阵问题" class="headerlink" title="2.托普利茨矩阵问题"></a>2.托普利茨矩阵问题</h3><p><a href="https://leetcode-cn.com/problems/toeplitz-matrix/" target="_blank" rel="noopener">leetcode原题766</a><br>如果一个矩阵的每一方向由左上到右下的对角线上具有相同元素，那么这个矩阵是托普利茨矩阵。</p>
-<p>给定一个M x N的矩阵，当且仅当它是托普利茨矩阵时返回True。</p>
-<p>示例：</p>
-<p>输入:<br>matrix = [<br>  [1,2,3,4],<br>  [5,1,2,3],<br>  [9,5,1,2]<br>]</p>
-<p>输出: True<br>解释:</p>
-<p>在上述矩阵中, 其对角线为: “[9]”, “[5, 5]”, “[1, 1, 1]”, “[2, 2, 2]”, “[3, 3]”, “[4]”。 各条对角线上的所有元素均相同, 因此答案是True。<br>1.方法一<br>算法与思路：首先要想明白的是怎么判断 (r1, c1 和 (r2, c2) 这两个点属于一条对角线，(r1,c2)和(r2, c3)这两个点属于同一条对角线。所以对角线上的两个点可以这么来表示：(r,c)和(r+1, c+1)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">     def isToeplitzMatrix(self, matrix: List[List[int]]) -&gt; bool:</span><br><span class="line">         for i in range(len(matrix)-1):</span><br><span class="line">             for j in range(len(matrix[i])-1):</span><br><span class="line">                 if matrix[i][j] !&#x3D; matrix[i+1][j+1]:</span><br><span class="line">                     return False</span><br><span class="line">         return True</span><br></pre></td></tr></table></figure><br>2.方法二<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">     def isToeplitzMatrix(self, matrix: List[List[int]]) -&gt; bool:</span><br><span class="line">        return not (True in [matrix[i][:-1] !&#x3D; matrix[i+1][1:] for i in range(len(matrix)-1)])</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-三数之和"><a href="#3-三数之和" class="headerlink" title="3.三数之和"></a>3.三数之和</h3><p><a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">leetcode原题15</a></p>
-<p>给定一个包含 n 个整数的数组nums，判断nums中是否存在三个元素a，b，c，使得a + b + c = 0？找出所有满足条件且不重复的三元组。</p>
-<p>注意：答案中不可以包含重复的三元组。</p>
-<p>示例：</p>
-<p>给定数组 nums = [-1, 0, 1, 2, -1, -4]，</p>
-<p>满足要求的三元组集合为：<br>[<br>  [-1, 0, 1],<br>  [-1, -1, 2]<br>]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def threeSum(self, nums: [int]) -&gt; [[int]]:</span><br><span class="line">        nums.sort()</span><br><span class="line">        res, k &#x3D; [], 0</span><br><span class="line">        for k in range(len(nums) - 2):</span><br><span class="line">            if nums[k] &gt; 0: </span><br><span class="line">                break # 1. because of j &gt; i &gt; k.</span><br><span class="line">            if k &gt; 0 and nums[k] &#x3D;&#x3D; nums[k - 1]: </span><br><span class="line">                continue # 2. skip the same &#96;nums[k]&#96;.</span><br><span class="line">            i, j &#x3D; k + 1, len(nums) - 1</span><br><span class="line">            while i &lt; j: # 3. double pointer</span><br><span class="line">                s &#x3D; nums[k] + nums[i] + nums[j]</span><br><span class="line">                if s &lt; 0:</span><br><span class="line">                    i +&#x3D; 1</span><br><span class="line">                    while i &lt; j and nums[i] &#x3D;&#x3D; nums[i - 1]: i +&#x3D; 1</span><br><span class="line">                elif s &gt; 0:</span><br><span class="line">                    j -&#x3D; 1</span><br><span class="line">                    while i &lt; j and nums[j] &#x3D;&#x3D; nums[j + 1]: j -&#x3D; 1</span><br><span class="line">                else:</span><br><span class="line">                    res.append([nums[k], nums[i], nums[j]])</span><br><span class="line">                    i +&#x3D; 1</span><br><span class="line">                    j -&#x3D; 1</span><br><span class="line">                    while i &lt; j and nums[i] &#x3D;&#x3D; nums[i - 1]: i +&#x3D; 1</span><br><span class="line">                    while i &lt; j and nums[j] &#x3D;&#x3D; nums[j + 1]: j -&#x3D; 1</span><br><span class="line">        return res</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+<p>理解数组的存储与分类。<br>实现动态数组，该数组能够根据需要修改数组的长度。<br>练习部分<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/article/24a04a3e.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xinyunduan.github.io/article/88c65abf.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="Duan Xinyun">
-      <meta itemprop="description" content="Brainy is the new sexy">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="咸鱼翻身">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/article/88c65abf.html" class="post-title-link" itemprop="url">Logistic回归算法</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-01-01 19:05:52" itemprop="dateCreated datePublished" datetime="2020-01-01T19:05:52+08:00">2020-01-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-04 22:12:17" itemprop="dateModified" datetime="2020-01-04T22:12:17+08:00">2020-01-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>351</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-什么是Logistic回归模型"><a href="#1-什么是Logistic回归模型" class="headerlink" title="1.什么是Logistic回归模型"></a>1.什么是Logistic回归模型</h2><h3 id="1-1-初识logistic回归模型"><a href="#1-1-初识logistic回归模型" class="headerlink" title="1.1 初识logistic回归模型"></a>1.1 初识logistic回归模型</h3><h3 id="1-2-了解Sigmoid函数"><a href="#1-2-了解Sigmoid函数" class="headerlink" title="1.2 了解Sigmoid函数"></a>1.2 了解Sigmoid函数</h3><h3 id="1-3-logistic回归模型的含义"><a href="#1-3-logistic回归模型的含义" class="headerlink" title="1.3 logistic回归模型的含义"></a>1.3 logistic回归模型的含义</h3><h2 id="2-logistic回归模型的参数最优化"><a href="#2-logistic回归模型的参数最优化" class="headerlink" title="2.logistic回归模型的参数最优化"></a>2.logistic回归模型的参数最优化</h2><h3 id="2-1-logistic回归模型的损失函数"><a href="#2-1-logistic回归模型的损失函数" class="headerlink" title="2.1 logistic回归模型的损失函数"></a>2.1 logistic回归模型的损失函数</h3><h3 id="2-2-logistic回归模型的参数最优化"><a href="#2-2-logistic回归模型的参数最优化" class="headerlink" title="2.2 logistic回归模型的参数最优化"></a>2.2 logistic回归模型的参数最优化</h3><h3 id="2-3-logistic回归模型常用的优化方法"><a href="#2-3-logistic回归模型常用的优化方法" class="headerlink" title="2.3 logistic回归模型常用的优化方法"></a>2.3 logistic回归模型常用的优化方法</h3><h4 id="2-3-1-一阶方法"><a href="#2-3-1-一阶方法" class="headerlink" title="2.3.1 一阶方法"></a>2.3.1 一阶方法</h4><h4 id="2-3-2-二阶方法"><a href="#2-3-2-二阶方法" class="headerlink" title="2.3.2 二阶方法"></a>2.3.2 二阶方法</h4><h2 id="3-logistic回归的特征处理（离散化）"><a href="#3-logistic回归的特征处理（离散化）" class="headerlink" title="3.logistic回归的特征处理（离散化）"></a>3.logistic回归的特征处理（离散化）</h2><h2 id="4-logistic与感知机模型的比较"><a href="#4-logistic与感知机模型的比较" class="headerlink" title="4.logistic与感知机模型的比较"></a>4.logistic与感知机模型的比较</h2><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><h2 id="6-常见面试问题"><a href="#6-常见面试问题" class="headerlink" title="6.常见面试问题"></a>6.常见面试问题</h2><ul>
-<li>1.LR的归一化问题，什么情况必须归一化，什么情况可以不归一化</li>
-<li>2.SGD和BGD的区别，对比offline learning和onlearning的区别</li>
-<li>3.LR的分布式实现逻辑是什么，数据并行和模型并行的区别</li>
-<li>4.LR的正则化，l1和l2的原理，集几何解释与概率解释</li>
-</ul>
-
       
     </div>
 
@@ -685,6 +491,205 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/article/ab9e1965.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xinyunduan.github.io/article/d66ff0fb.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Duan Xinyun">
+      <meta itemprop="description" content="Brainy is the new sexy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咸鱼翻身">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/article/d66ff0fb.html" class="post-title-link" itemprop="url">贝叶斯算法</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-04 22:12:49" itemprop="dateCreated datePublished" datetime="2019-10-04T22:12:49+08:00">2019-10-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-04 22:39:52" itemprop="dateModified" datetime="2020-01-04T22:39:52+08:00">2020-01-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>152</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、贝叶斯要解决的问题"><a href="#1、贝叶斯要解决的问题" class="headerlink" title="1、贝叶斯要解决的问题"></a>1、贝叶斯要解决的问题</h1><p>正向概率：已知袋子中有N个白球和M个黑球，摸到白球的概率多大？</p>
+<p>逆向概率：事先不知道袋子中黑白球的比例，通过摸出来球的颜色来判断球的比例。<br>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/article/d66ff0fb.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xinyunduan.github.io/article/88c65abf.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Duan Xinyun">
+      <meta itemprop="description" content="Brainy is the new sexy">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="咸鱼翻身">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/article/88c65abf.html" class="post-title-link" itemprop="url">Logistic回归算法</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-02 19:05:52" itemprop="dateCreated datePublished" datetime="2019-10-02T19:05:52+08:00">2019-10-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-04 22:40:24" itemprop="dateModified" datetime="2020-01-04T22:40:24+08:00">2020-01-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>351</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-什么是Logistic回归模型"><a href="#1-什么是Logistic回归模型" class="headerlink" title="1.什么是Logistic回归模型"></a>1.什么是Logistic回归模型</h2><h3 id="1-1-初识logistic回归模型"><a href="#1-1-初识logistic回归模型" class="headerlink" title="1.1 初识logistic回归模型"></a>1.1 初识logistic回归模型</h3><h3 id="1-2-了解Sigmoid函数"><a href="#1-2-了解Sigmoid函数" class="headerlink" title="1.2 了解Sigmoid函数"></a>1.2 了解Sigmoid函数</h3><h3 id="1-3-logistic回归模型的含义"><a href="#1-3-logistic回归模型的含义" class="headerlink" title="1.3 logistic回归模型的含义"></a>1.3 logistic回归模型的含义</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/article/88c65abf.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>贝叶斯算法</title>
-    <url>/article/d66ff0fb.html</url>
-    <content><![CDATA[<h1 id="1、贝叶斯要解决的问题"><a href="#1、贝叶斯要解决的问题" class="headerlink" title="1、贝叶斯要解决的问题"></a>1、贝叶斯要解决的问题</h1><p>正向概率：已知袋子中有N个白球和M个黑球，摸到白球的概率多大？</p>
-<p>逆向概率：事先不知道袋子中黑白球的比例，通过摸出来球的颜色来判断球的比例。</p>
-<p>贝叶斯是在概率的框架下实施决策的节本方法。对分类来说，在所有相关概率都已知的理想情形下，贝叶斯考虑如何基于这些概率和误判损失来按着最优的类别标记。</p>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2020春节学习-数据结构与算法task01</title>
     <url>/article/24a04a3e.html</url>
     <content><![CDATA[<p>Task01：数组（1天）<br>理论部分</p>
-<p>理解数组的存储与分类。<br>实现动态数组，该数组能够根据需要修改数组的长度。<br>练习部分</p>
+<p>理解数组的存储与分类。<br>实现动态数组，该数组能够根据需要修改数组的长度。<br>练习部分<br><a id="more"></a></p>
 <h3 id="1-利用动态数组解决数据存放问题"><a href="#1-利用动态数组解决数据存放问题" class="headerlink" title="1.利用动态数组解决数据存放问题"></a>1.利用动态数组解决数据存放问题</h3><p>编写一段代码，要求输入一个整数N，用动态数组A来存放2~N之间所有5或7的倍数，输出该数组。</p>
 <p>示例：</p>
 <p>输入：<br>N = 100 </p>
@@ -43,24 +28,6 @@
       <tags>
         <tag>数据结构与算法</tag>
         <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Logistic回归算法</title>
-    <url>/article/88c65abf.html</url>
-    <content><![CDATA[<h2 id="1-什么是Logistic回归模型"><a href="#1-什么是Logistic回归模型" class="headerlink" title="1.什么是Logistic回归模型"></a>1.什么是Logistic回归模型</h2><h3 id="1-1-初识logistic回归模型"><a href="#1-1-初识logistic回归模型" class="headerlink" title="1.1 初识logistic回归模型"></a>1.1 初识logistic回归模型</h3><h3 id="1-2-了解Sigmoid函数"><a href="#1-2-了解Sigmoid函数" class="headerlink" title="1.2 了解Sigmoid函数"></a>1.2 了解Sigmoid函数</h3><h3 id="1-3-logistic回归模型的含义"><a href="#1-3-logistic回归模型的含义" class="headerlink" title="1.3 logistic回归模型的含义"></a>1.3 logistic回归模型的含义</h3><h2 id="2-logistic回归模型的参数最优化"><a href="#2-logistic回归模型的参数最优化" class="headerlink" title="2.logistic回归模型的参数最优化"></a>2.logistic回归模型的参数最优化</h2><h3 id="2-1-logistic回归模型的损失函数"><a href="#2-1-logistic回归模型的损失函数" class="headerlink" title="2.1 logistic回归模型的损失函数"></a>2.1 logistic回归模型的损失函数</h3><h3 id="2-2-logistic回归模型的参数最优化"><a href="#2-2-logistic回归模型的参数最优化" class="headerlink" title="2.2 logistic回归模型的参数最优化"></a>2.2 logistic回归模型的参数最优化</h3><h3 id="2-3-logistic回归模型常用的优化方法"><a href="#2-3-logistic回归模型常用的优化方法" class="headerlink" title="2.3 logistic回归模型常用的优化方法"></a>2.3 logistic回归模型常用的优化方法</h3><h4 id="2-3-1-一阶方法"><a href="#2-3-1-一阶方法" class="headerlink" title="2.3.1 一阶方法"></a>2.3.1 一阶方法</h4><h4 id="2-3-2-二阶方法"><a href="#2-3-2-二阶方法" class="headerlink" title="2.3.2 二阶方法"></a>2.3.2 二阶方法</h4><h2 id="3-logistic回归的特征处理（离散化）"><a href="#3-logistic回归的特征处理（离散化）" class="headerlink" title="3.logistic回归的特征处理（离散化）"></a>3.logistic回归的特征处理（离散化）</h2><h2 id="4-logistic与感知机模型的比较"><a href="#4-logistic与感知机模型的比较" class="headerlink" title="4.logistic与感知机模型的比较"></a>4.logistic与感知机模型的比较</h2><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><h2 id="6-常见面试问题"><a href="#6-常见面试问题" class="headerlink" title="6.常见面试问题"></a>6.常见面试问题</h2><ul>
-<li>1.LR的归一化问题，什么情况必须归一化，什么情况可以不归一化</li>
-<li>2.SGD和BGD的区别，对比offline learning和onlearning的区别</li>
-<li>3.LR的分布式实现逻辑是什么，数据并行和模型并行的区别</li>
-<li>4.LR的正则化，l1和l2的原理，集几何解释与概率解释</li>
-</ul>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -123,6 +90,39 @@
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>贝叶斯算法</title>
+    <url>/article/d66ff0fb.html</url>
+    <content><![CDATA[<h1 id="1、贝叶斯要解决的问题"><a href="#1、贝叶斯要解决的问题" class="headerlink" title="1、贝叶斯要解决的问题"></a>1、贝叶斯要解决的问题</h1><p>正向概率：已知袋子中有N个白球和M个黑球，摸到白球的概率多大？</p>
+<p>逆向概率：事先不知道袋子中黑白球的比例，通过摸出来球的颜色来判断球的比例。<br><a id="more"></a><br>贝叶斯是在概率的框架下实施决策的节本方法。对分类来说，在所有相关概率都已知的理想情形下，贝叶斯考虑如何基于这些概率和误判损失来按着最优的类别标记。</p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Logistic回归算法</title>
+    <url>/article/88c65abf.html</url>
+    <content><![CDATA[<h2 id="1-什么是Logistic回归模型"><a href="#1-什么是Logistic回归模型" class="headerlink" title="1.什么是Logistic回归模型"></a>1.什么是Logistic回归模型</h2><h3 id="1-1-初识logistic回归模型"><a href="#1-1-初识logistic回归模型" class="headerlink" title="1.1 初识logistic回归模型"></a>1.1 初识logistic回归模型</h3><h3 id="1-2-了解Sigmoid函数"><a href="#1-2-了解Sigmoid函数" class="headerlink" title="1.2 了解Sigmoid函数"></a>1.2 了解Sigmoid函数</h3><h3 id="1-3-logistic回归模型的含义"><a href="#1-3-logistic回归模型的含义" class="headerlink" title="1.3 logistic回归模型的含义"></a>1.3 logistic回归模型的含义</h3><a id="more"></a>
+<h2 id="2-logistic回归模型的参数最优化"><a href="#2-logistic回归模型的参数最优化" class="headerlink" title="2.logistic回归模型的参数最优化"></a>2.logistic回归模型的参数最优化</h2><h3 id="2-1-logistic回归模型的损失函数"><a href="#2-1-logistic回归模型的损失函数" class="headerlink" title="2.1 logistic回归模型的损失函数"></a>2.1 logistic回归模型的损失函数</h3><h3 id="2-2-logistic回归模型的参数最优化"><a href="#2-2-logistic回归模型的参数最优化" class="headerlink" title="2.2 logistic回归模型的参数最优化"></a>2.2 logistic回归模型的参数最优化</h3><h3 id="2-3-logistic回归模型常用的优化方法"><a href="#2-3-logistic回归模型常用的优化方法" class="headerlink" title="2.3 logistic回归模型常用的优化方法"></a>2.3 logistic回归模型常用的优化方法</h3><h4 id="2-3-1-一阶方法"><a href="#2-3-1-一阶方法" class="headerlink" title="2.3.1 一阶方法"></a>2.3.1 一阶方法</h4><h4 id="2-3-2-二阶方法"><a href="#2-3-2-二阶方法" class="headerlink" title="2.3.2 二阶方法"></a>2.3.2 二阶方法</h4><h2 id="3-logistic回归的特征处理（离散化）"><a href="#3-logistic回归的特征处理（离散化）" class="headerlink" title="3.logistic回归的特征处理（离散化）"></a>3.logistic回归的特征处理（离散化）</h2><h2 id="4-logistic与感知机模型的比较"><a href="#4-logistic与感知机模型的比较" class="headerlink" title="4.logistic与感知机模型的比较"></a>4.logistic与感知机模型的比较</h2><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><h2 id="6-常见面试问题"><a href="#6-常见面试问题" class="headerlink" title="6.常见面试问题"></a>6.常见面试问题</h2><ul>
+<li>1.LR的归一化问题，什么情况必须归一化，什么情况可以不归一化</li>
+<li>2.SGD和BGD的区别，对比offline learning和onlearning的区别</li>
+<li>3.LR的分布式实现逻辑是什么，数据并行和模型并行的区别</li>
+<li>4.LR的正则化，l1和l2的原理，集几何解释与概率解释</li>
+</ul>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
