@@ -590,3 +590,24 @@ pretty_urls:
 npm install hexo-abbrlink --save
 ```
 打开网站就可以看到效果：http://localhost:4000/article/ab9e1965.html
+
+# 28.添加公益404页面
+1.首先生成一个新的页面
+进入到博客的根目录下：
+```
+hexo new page 404
+```
+2.添加404公益页面的代码
+打开刚新建的页面文件，默认在 Hexo 文件夹根目录下 /source/404/index.md，添加如下代码：
+```
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>404</title>
+	</head>
+	<body>
+		<script type="text/javascript" 			  src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script>
+	</body>
+</html>
+```
