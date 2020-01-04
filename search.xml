@@ -45,8 +45,8 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>算法</tag>
         <tag>数据结构</tag>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -102,27 +102,8 @@
         <category>机器学习</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
         <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Logistic回归算法</title>
-    <url>/article/88c65abf.html</url>
-    <content><![CDATA[<h2 id="1-什么是Logistic回归模型"><a href="#1-什么是Logistic回归模型" class="headerlink" title="1.什么是Logistic回归模型"></a>1.什么是Logistic回归模型</h2><h3 id="1-1-初识logistic回归模型"><a href="#1-1-初识logistic回归模型" class="headerlink" title="1.1 初识logistic回归模型"></a>1.1 初识logistic回归模型</h3><h3 id="1-2-了解Sigmoid函数"><a href="#1-2-了解Sigmoid函数" class="headerlink" title="1.2 了解Sigmoid函数"></a>1.2 了解Sigmoid函数</h3><h3 id="1-3-logistic回归模型的含义"><a href="#1-3-logistic回归模型的含义" class="headerlink" title="1.3 logistic回归模型的含义"></a>1.3 logistic回归模型的含义</h3><a id="more"></a>
-<h2 id="2-logistic回归模型的参数最优化"><a href="#2-logistic回归模型的参数最优化" class="headerlink" title="2.logistic回归模型的参数最优化"></a>2.logistic回归模型的参数最优化</h2><h3 id="2-1-logistic回归模型的损失函数"><a href="#2-1-logistic回归模型的损失函数" class="headerlink" title="2.1 logistic回归模型的损失函数"></a>2.1 logistic回归模型的损失函数</h3><h3 id="2-2-logistic回归模型的参数最优化"><a href="#2-2-logistic回归模型的参数最优化" class="headerlink" title="2.2 logistic回归模型的参数最优化"></a>2.2 logistic回归模型的参数最优化</h3><h3 id="2-3-logistic回归模型常用的优化方法"><a href="#2-3-logistic回归模型常用的优化方法" class="headerlink" title="2.3 logistic回归模型常用的优化方法"></a>2.3 logistic回归模型常用的优化方法</h3><h4 id="2-3-1-一阶方法"><a href="#2-3-1-一阶方法" class="headerlink" title="2.3.1 一阶方法"></a>2.3.1 一阶方法</h4><h4 id="2-3-2-二阶方法"><a href="#2-3-2-二阶方法" class="headerlink" title="2.3.2 二阶方法"></a>2.3.2 二阶方法</h4><h2 id="3-logistic回归的特征处理（离散化）"><a href="#3-logistic回归的特征处理（离散化）" class="headerlink" title="3.logistic回归的特征处理（离散化）"></a>3.logistic回归的特征处理（离散化）</h2><h2 id="4-logistic与感知机模型的比较"><a href="#4-logistic与感知机模型的比较" class="headerlink" title="4.logistic与感知机模型的比较"></a>4.logistic与感知机模型的比较</h2><h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h2><h2 id="6-常见面试问题"><a href="#6-常见面试问题" class="headerlink" title="6.常见面试问题"></a>6.常见面试问题</h2><ul>
-<li>1.LR的归一化问题，什么情况必须归一化，什么情况可以不归一化</li>
-<li>2.SGD和BGD的区别，对比offline learning和onlearning的区别</li>
-<li>3.LR的分布式实现逻辑是什么，数据并行和模型并行的区别</li>
-<li>4.LR的正则化，l1和l2的原理，集几何解释与概率解释</li>
-</ul>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
         <tag>机器学习</tag>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -263,6 +244,7 @@
 将#more删掉。</li>
 </ul>
 <h1 id="27-修改永久链接的默认格式"><a href="#27-修改永久链接的默认格式" class="headerlink" title="27.修改永久链接的默认格式"></a>27.修改永久链接的默认格式</h1><p>如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 SEO，且 gitment 评论对中文链接也不支持。<br>在Hexo根目录下的 _config.yml 文件采用初始设置。这里因为用“年月日”会让文章链接的层次太深，所以我用”article”代替：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &#39;http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as &#39;&#x2F;child&#x2F;&#39;</span><br><span class="line">url: https:&#x2F;&#x2F;xinyunduan.github.io&#x2F;</span><br><span class="line">root: &#x2F;archives&#x2F;</span><br><span class="line">#permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br><span class="line">permalink: article&#x2F;:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  #rep: hex    # 进制：dec(default) and hex</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#39;index.html&#39; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#39;.html&#39; from permalinks</span><br></pre></td></tr></table></figure><br>在Hexo的根目录下安装插件：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><br>打开网站就可以看到效果：<a href="http://localhost:4000/article/ab9e1965.html" target="_blank" rel="noopener">http://localhost:4000/article/ab9e1965.html</a></p>
+<h1 id="28-添加公益404页面"><a href="#28-添加公益404页面" class="headerlink" title="28.添加公益404页面"></a>28.添加公益404页面</h1><p>1.首先生成一个新的页面<br>进入到博客的根目录下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure><br>2.添加404公益页面的代码<br>打开刚新建的页面文件，默认在 Hexo 文件夹根目录下 /source/404/index.md，添加如下代码：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang&#x3D;&quot;en&quot;&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;404&lt;&#x2F;title&gt;</span><br><span class="line">	&lt;&#x2F;head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; 			  src&#x3D;&quot;&#x2F;&#x2F;qzonestyle.gtimg.cn&#x2F;qzone&#x2F;hybrid&#x2F;app&#x2F;404&#x2F;search_children.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <categories>
         <category>工具</category>
