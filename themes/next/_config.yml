@@ -132,7 +132,7 @@ menu:
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------
@@ -195,7 +195,7 @@ social:
 
 social_icons:
   enable: true
-  icons_only: false
+  icons_only: true
   transition: false
 
 # Blog rolls
@@ -268,13 +268,13 @@ tag_icon: true
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: false
+  enable: true
   animation: false
-  #comment: Donate comment here.
+  comment: 如果你喜欢这篇文章，可以请我喝一杯~
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/wechatpay.jpg
+  alipay: /images/alipay.jpg
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
@@ -1040,7 +1040,7 @@ auto_excerpt:
   length: 150
 
 # 添加背景音乐
-background_music: //music.163.com/outchain/player?type=2&id=357384&auto=1&height=66
+background_music: //music.163.com/outchain/player?type=2&id=27908576&auto=1&height=66
 
 # Enable "cheers" for archive page.
 cheers: false

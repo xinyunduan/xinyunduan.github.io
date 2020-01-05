@@ -11,6 +11,6 @@ type:
 		<title>404</title>
 	</head>
 	<body>
-		<script type="text/javascript" 			  src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script>
+		<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script>
 	</body>
 </html>
